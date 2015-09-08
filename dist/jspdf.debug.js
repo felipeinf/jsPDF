@@ -1,7 +1,7 @@
 /** @preserve
  * jsPDF - PDF Document creation from JavaScript
- * Version 1.1.232-git Built on 2015-08-20T12:02
- *                           CommitID 67cd0d6b3c
+ * Version 1.1.251-git Built on 2015-09-08T12:26
+ *                           CommitID d432ac7e2f
  *
  * Copyright (c) 2010-2014 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
  *               2010 Aaron Spike, https://github.com/acspike
@@ -777,23 +777,22 @@ var jsPDF = (function(global) {
 			if (fontName !== undefined){
 				fontName = fontName.toLowerCase();
 			}
-			switch(fontName){
-			case 'sans-serif':
-			case 'verdana':
-			case 'arial':
-				fontName = 'helvetica';
-				break;
-			case 'fixed':
-			case 'monospace':
-			case 'terminal':
-				fontName = 'courier';
-				break;
-			case 'serif':
-			case 'cursive':
-			case 'fantasy':
-				default:
-				fontName = 'times';
-				break;
+			switch(fontName) {
+				case 'sans-serif':
+				case 'verdana':
+				case 'arial':
+					fontName = 'helvetica';
+					break;
+				case 'fixed':
+				case 'monospace':
+				case 'terminal':
+					fontName = 'courier';
+					break;
+				case 'serif':
+				case 'cursive':
+				case 'fantasy':
+					fontName = 'times';
+					break;
 			}
 
 			try {
@@ -2035,7 +2034,7 @@ var jsPDF = (function(global) {
 	 * pdfdoc.mymethod() // <- !!!!!!
 	 */
 	jsPDF.API = {events:[]};
-	jsPDF.version = "1.1.232-debug 2015-08-20T12:02:user";
+	jsPDF.version = "1.1.251-debug 2015-09-08T12:26:user";
 
 	if (typeof define === 'function' && define.amd) {
 		define('jsPDF', function() {
